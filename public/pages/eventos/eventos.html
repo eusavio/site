@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos | Clube do Improviso · UFC Russas</title>
+  <link rel="stylesheet" href="/pages/eventos/eventos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span>Contato: (88) 99999-9999</span>
+      <span>Oficinas: Qui às 18hrs / Sex às 15 hrs</span>
+    </div>
+    <div class="topbar-right">
+      <a href="https://www.instagram.com/clubedoimproviso/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/5588999999999" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://chat.whatsapp.com/HrNYCHjyv0I4OOZAD7ft1E" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-circle">
+        <img src="/images/simbolo-clube.jpg" alt="Clube do Improviso">
+      </div>
+      <span>Clube do Improviso</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" id="linkInicio">Início</a></li>
+      <li><a class="active">Eventos</a></li>
+      <li><a href="/sobre">Sobre Nós</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>AGENDA DO IMPROVISO</h1>
+    <p>Encontros, espetáculos e vivências teatrais abertas para toda a comunidade da UFC Russas e região.</p>
+  </div>
+
+  <main class="events-page-main">
+    <div class="view-toggle">
+      <button class="toggle-btn active" id="showUpcomingBtn">PRÓXIMOS EVENTOS</button>
+      <button class="toggle-btn" id="showPastBtn">EVENTOS ANTERIORES</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" class="search-input" placeholder="Buscar evento...">
+      <button id="searchBtn" class="search-btn">Buscar</button>
+    </div>
+
+    <div class="events-list-container">
+      <div id="eventsContainer" class="events-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <h3>Clube do Improviso</h3>
+    <p>Universidade Federal do Ceará - Campus Russas</p>
+    <p>Expressão, criatividade e conexão através do improviso.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script src="/pages/eventos/eventos.js"></script>
+</body>
+</html>

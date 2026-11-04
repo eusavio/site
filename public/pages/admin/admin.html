@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administração | Clube do Improviso</title>
+  
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="admin.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+
+  <header class="hero admin-hero" id="inicio">
+    <div class="overlay"></div>
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <span>Painel Administrativo</span>
+        <span>Clube do Improviso - UFC Russas</span>
+      </div>
+      <div class="topbar-right">
+        <a href="../../index.html"><i class="fas fa-external-link-alt"></i> Ver Site</a>
+        <a href="#"><i class="fas fa-user"></i> Rian</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-circle">
+          <img src="../../images/simbolo-clube.jpg" alt="Clube do Improviso">
+        </div>
+        <span>Admin</span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#Dashboard" class="active">Dashboard</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#membros">Membros</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content admin-hero-content">
+      <p class="hero-subtitle">Painel de Controle</p>
+      <h1>GERENCIAMENTO DE EVENTOS</h1>
+      <p class="hero-text">
+        Adicione, edite ou remova os eventos do Clube do Improviso. 
+        Mantenha as informações sempre atualizadas para o público.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="btnNovoEvento">
+          <i class="fas fa-plus"></i> Novo Evento
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+
+    <section class="admin-stats">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+        <div class="stat-info">
+          <h3>12</h3>
+          <p>Eventos Cadastrados</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        <div class="stat-info">
+          <h3>3</h3>
+          <p>Próximos Eventos</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-info">
+          <h3>8</h3>
+          <p>Membros Ativos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtros e Busca -->
+    <section class="admin-filters">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar evento por título...">
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Próximos</button>
+        <button class="filter-btn">Passados</button>
+      </div>
+    </section>
+
+    <!-- Tabela de Eventos -->
+    <section class="admin-table-wrapper">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Título</th>
+            <th>Local</th>
+            <th>Tipo</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="table-date">
+                <strong>18</strong>
+                <span>JUN</span>
+              </div>
+            </td>
+            <td>Apresentação Auto da Barra do Inferno</td>
+            <td>Teatro Municipal</td>
+            <td><span class="etag etag-type">Apresentação</span></td>
+            <td><span class="badge badge-success">Futuro</span></td>
+            <td class="table-actions">
+              <button class="btn-icon btn-edit" title="Editar"><i class="fas fa-edit"></i></button>
+              <button class="btn-icon btn-delete" title="Excluir"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table-date">
+                <strong>12</strong>
+                <span>JUN</span>
+              </div>
+            </td>
+            <td>Oficina de Mímica</td>
+            <td>Auditório UFC Russas</td>
+            <td><span class="etag etag-type">Oficina</span></td>
+            <td><span class="badge badge-success">Futuro</span></td>
+            <td class="table-actions">
+              <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table-date past">
+                <strong>15</strong>
+                <span>MAI</span>
+              </div>
+            </td>
+            <td>Festival de Teatro Universitário</td>
+            <td>Centro Cultural</td>
+            <td><span class="etag etag-project">Festival</span></td>
+            <td><span class="badge badge-secondary">Passado</span></td>
+            <td class="table-actions">
+              <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Paginação -->
+    <div class="admin-pagination">
+      <button disabled><i class="fas fa-chevron-left"></i></button>
+      <span>Página 1 de 3</span>
+      <button><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+  </main>
+
+  <!-- Modal de Cadastro/Edição -->
+  <div class="modal-overlay" id="modalEvento">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-calendar-plus"></i> Novo Evento</h2>
+        <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
+      </div>
+      <form class="admin-form" id="formEvento">
+        <div class="form-group">
+          <label for="titulo">Título do Evento *</label>
+          <input type="text" id="titulo" placeholder="Ex: Oficina de Improviso" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data *</label>
+            <input type="date" id="data" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Horário *</label>
+            <input type="time" id="hora" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="local">Local *</label>
+          <input type="text" id="local" placeholder="Ex: Auditório UFC Russas" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo de Evento *</label>
+          <select id="tipo" required>
+            <option value="">Selecione...</option>
+            <option value="oficina">Oficina</option>
+            <option value="apresentacao">Apresentação</option>
+            <option value="festival">Festival</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição *</label>
+          <textarea id="descricao" rows="4" placeholder="Detalhes do evento..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelModal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Salvar Evento</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h3>Clube do Improviso</h3>
+    <p>Universidade Federal do Ceará - Campus Russas</p>
+    <p>Expressão, criatividade e conexão através do improviso.</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
